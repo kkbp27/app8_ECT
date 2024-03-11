@@ -1,5 +1,4 @@
 import React from 'react'
-import react from 'react'
 export default function FormPost(){
     let[PostedData,setPostedData]=React.useState('')
     const form = React.useRef()
@@ -25,8 +24,8 @@ export default function FormPost(){
             <form ref={form} onSubmit={onSubmitForm}>
             <div>ติดต่อเรา</div>
             <input type="text" name="name" size="43" placeholder="ชื่อ" style={inputStyle}/><br/>
-            <input type="email" name="name" size="43" placeholder="อีเมล" style={inputStyle}/><br/>
-            <textarea name="maessage" cols="40" row="4" placeholder="ข้อความ" style={inputStyle}></textarea><br/>
+            <input type="email" name="email" size="43" placeholder="อีเมล" style={inputStyle}/><br/>
+            <textarea name="message" cols="40" row="4" placeholder="ข้อความ" style={inputStyle}></textarea><br/>
             <button>ตกลง</button>
             </form>
             <div dangerouslySetInnerHTML={{__html: PostedData}}></div>

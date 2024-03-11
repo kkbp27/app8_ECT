@@ -1,11 +1,12 @@
 const express=require('express')
 const app=express()
-const port=8000
+const port=3000
+
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 app.use(express.static('public'))
 
-app.get('/api/form-post',(request,response)=>{
+app.post('/api/form-post',(request,response)=>{
     let name = request.body.name || ''
     let email = request.body.email || ''
     let msg = request.body.message || ''
